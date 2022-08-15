@@ -1,0 +1,3 @@
+com.xuezhua.swagger.config.SwaggerAutoConfiguration
+com.xuezhua.swagger.config.SwaggerWebConfiguration
+com.xuezhua.swagger.config.SwaggerBeanPostProcessor

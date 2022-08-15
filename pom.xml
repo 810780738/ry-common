@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.xuezhua</groupId>
+    <artifactId>ry-common</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+<!--        <module>ry-common-log</module>-->
+<!--        <module>ry-common-security</module>-->
+<!--        <module>ry-common-log</module>-->
+<!--        <module>ry-common-security</module>-->
+<!--        <module>ry-common-core</module>-->
+<!--        <module>ry-common-redis</module>-->
+<!--        <module>ry-common-swagger</module>-->
+<!--        <module>ry-common-datascope</module>-->
+<!--        <module>ry-common-datasource</module>-->
+    </modules>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-webmvc.version>5.3.22</spring-webmvc.version>
+        <spring-boot.version>2.7.2</spring-boot.version>
+        <spring-context.version>5.3.22</spring-context.version>
+        <ry-common.version>1.0-SNAPSHOT</ry-common.version>
+    </properties>
+
+    <dependencyManagement>
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework</groupId>-->
+<!--                <artifactId>spring-webmvc</artifactId>-->
+<!--                <version>${spring-webmvc.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework</groupId>-->
+<!--                <artifactId>spring-context-support</artifactId>-->
+<!--                <version>${spring-context.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-dependencies</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.xuezhua</groupId>-->
+<!--                <artifactId>ry-common-security</artifactId>-->
+<!--                <version>${ry-common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.xuezhua</groupId>-->
+<!--                <artifactId>ry-common-core</artifactId>-->
+<!--               <version>${ry-common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.xuezhua</groupId>-->
+<!--                <artifactId>ry-common-datascope</artifactId>-->
+<!--               <version>${ry-common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.xuezhua</groupId>-->
+<!--                <artifactId>ry-common-datasource</artifactId>-->
+<!--               <version>${ry-common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.xuezhua</groupId>-->
+<!--                <artifactId>ry-common-log</artifactId>-->
+<!--               <version>${ry-common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.xuezhua</groupId>-->
+<!--                <artifactId>ry-common-redis</artifactId>-->
+<!--               <version>${ry-common.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.xuezhua</groupId>-->
+<!--                <artifactId>ry-common-swagger</artifactId>-->
+<!--               <version>${ry-common.version}</version>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>snapshots</id>
+            <url>http://192.168.0.173:10081/repository/maven-snapshots/</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <!--发布源码插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
